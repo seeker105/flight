@@ -8,7 +8,7 @@ In this world, the flights will only go to four cities: Orlando, Miami, Tallahas
 
 A new set of five flights is generated every "day"
 
-A day is definined in the FlightService
+A day is defined in the FlightService
 
 A day lasts as long as the @Scheduled annotation indicates, feel free to change this value to assist in your testing
 

@@ -22,6 +22,15 @@ The flight time is the number of hours the flight spends in the air
 
 The offset is the number of hours the flight waits from the beginning of the day until the flight departs
 
+
+[SET UP]
+Create a schema named "ftd_flight" through mysql workbench
+
+Run the project to generate tables
+
+Execute the contents of location.sql to populate the locations table
+
+
 [PROJECT REQUIREMENTS]
 
 Create a website where any visitor can see the up to date list of available flights

@@ -1,5 +1,4 @@
 import flightMap from './map/map.module'
-
 import apiUrl from './api.url'
 import appComponent from './app.component.js'
 

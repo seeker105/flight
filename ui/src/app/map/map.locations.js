@@ -1,16 +1,16 @@
 export default {
-  jacksonville: {
-    latitude: 30.3322,
-    longitude: -81.6557
+  memphis: {
+    latitude: 35.1495,
+    longitude: -90.0490
   },
 
-  miami: {
-    latitude: 25.7617,
-    longitude: -80.1918
+  nashville: {
+    latitude: 36.1627,
+    longitude: -86.7816
   },
 
-  tallahassee: {
-    latitude: 30.4383,
-    longitude: -84.2807
+  knoxville: {
+    latitude: 35.9606,
+    longitude: -83.9207
   }
 }

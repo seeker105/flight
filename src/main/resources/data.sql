@@ -1,4 +1,2 @@
-insert into ftd_flight.location(id, latitude, longitude, city) values (1, 28.5383, -81.3792, 'Orlando');
-insert into ftd_flight.location(id, latitude, longitude, city) values (2, 30.3322, -81.6557, 'Jacksonville');
-insert into ftd_flight.location(id, latitude, longitude, city) values (3, 25.7617, -80.1918, 'Miami');
-insert into ftd_flight.location(id, latitude, longitude, city) values (4, 30.4383, -84.2807, 'Tallahassee');
+
+insert into ftd_flight.location(id, latitude, longitude, city) values (1, 35.0457, -85.3096, 'Chattanooga'), (2, 35.9606, -83.9207, 'Knoxville'), (3, 36.1627, -86.7816, 'Nashville'), (4, 35.1495, -90.0490, 'Memphis') ON CONFLICT DO NOTHING

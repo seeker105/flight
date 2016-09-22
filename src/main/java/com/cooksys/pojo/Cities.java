@@ -2,7 +2,7 @@ package com.cooksys.pojo;
 
 public enum Cities {
 	
-	ORLANDO("Orlando"), TALLAHASSEE("Tallahassee"), MIAMI("Miami"), JACKSONVILLE("Jacksonville");
+	MEMPHIS("Memphis"), KNOXVILLE("KNOXVILLE"), CHATTANOOGA("CHATTANOOGA"), NASHVILLE("NASHVILLE");
 	
 	private String name;
 	

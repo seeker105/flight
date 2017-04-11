@@ -24,12 +24,11 @@ The offset is the number of hours the flight waits from the beginning of the day
 
 
 [SET UP]
-Create a schema named "ftd_flight" through mysql workbench
+Create a database named "ftd_flight"
 
 Run the project to generate tables
 
-Execute the contents of location.sql to populate the locations table
-
+Data should be populated into the "location" table based on the entries in the "data.sql" file
 
 [PROJECT REQUIREMENTS]
 
@@ -58,4 +57,3 @@ The user must be given the option to view their booked itinerary on a map as pro
 In the scenario of a multi-flight itinerary, lines must be displayed with a different color for each branch of the journey
 
 Information must be provided on the map template page that shows the user the order the line segments occur in, the flight time for that segment, and the layover time in each particular city
-

@@ -1,0 +1,70 @@
+<div class="register-container">
+    <div class="register">
+        <div class="register-header">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                </a>
+            </div>
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" ng-model="$ctrl.registerService.user.profile.firstName"
+                        maxlength="15"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" ng-model="$ctrl.registerService.user.profile.lastName"
+                        maxlength="15"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" ng-model="$ctrl.registerService.user.profile.email"
+                        maxlength="25"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" ng-model="$ctrl.registerService.user.profile.phone"
+                        maxlength="16"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-users fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username" ng-model="$ctrl.registerService.user.credentials.userLogin"
+                        maxlength="15"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" ng-model="$ctrl.registerService.user.credentials.password"
+                        maxlength="15"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <a type="button" id="button" class="btn btn-primary btn-lg login-button btn-block" ui-sref="userCreation">Register</a>
+            </div>
+        </form>
+    </div>
+</div>

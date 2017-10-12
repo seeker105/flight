@@ -1,0 +1,16 @@
+<div class="bookings" ng-repeat="itinerary in $ctrl.bookings">
+    <div class="well col-md-9" style="display: flex; flex-direction: column">
+        <a ui-sref="master.showMap({itineraryObj: $ctrl.getItineraryString(itinerary)})">Show Map</a>
+        <p>Total Flight Time: {{$ctrl.calculateFlightTime(itinerary)}}</p>
+        <p>Total Layover Time: {{$ctrl.calculateLayoverTime(itinerary)}} </p>
+        <div class="flight" ng-repeat="flight in itinerary">
+            <div class="card bg-light mb-3" style="{'max-width':'20rem', 'max-height':'5rem'}">
+                <div class="card-body">
+                    <p>From: {{flight.origin}} to {{flight.destination}}</p>
+                    <p>Leaving: {{flight.offset}}</p>
+                    <p>Arriving: {{flight.offset + flight.flightTime}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<h3>Search for flights</h3>
+
+<div class="container">
+    <div class="col-md-3">
+
+        <input type="text" id="input-origin" class="form-control" placeholder="Starting city" required maxlength="15" ng-model="$ctrl.mainService.origin">
+        <input type="text" id="input-origin" class="form-control" placeholder="Destination city" required maxlength="15" ng-model="$ctrl.mainService.destination">
+        <!-- <div class="col-md-1"> -->
+            <a ui-sref="master.itinerary">
+                <button class="btn btn-lg btn-default" type="submit" >Search</button>
+            </a>
+            
+        <!-- </div> -->
+        
+    </div>
+</div>
+
+<div class="fancy_header">
+    Flight List
+</div>
+<div class="container">
+
+    <div class="flight" ng-repeat="flight in $ctrl.flights">
+        <div class="col-md-9">
+
+            <div class="well">
+                <div class="card bg-light mb-3" style="{'max-width':'20rem', 'max-height':'5rem'}">
+                    <div class="bookings">
+                        <p class="card-title">From: {{flight.origin}} to {{flight.destination}}<p>
+                        <p>Leaving: {{flight.offset}}</p>
+                        <p>Arriving: {{flight.offset + flight.flightTime}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

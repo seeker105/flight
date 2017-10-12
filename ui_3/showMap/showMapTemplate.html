@@ -1,0 +1,26 @@
+<div class="fancy_header">
+    Your itinerary:
+</div>
+
+<div class="well">
+
+    <map center="[{{$ctrl.xCoord}}, {{$ctrl.yCoord}}]" zoom="7" />
+</div>
+
+
+<div class="well">
+
+    <div class="bookings">
+        <div ng-repeat="legendItem in $ctrl.legendArray">
+            <p ng-style="{color: legendItem.color}">
+                {{legendItem.fromToString}} </br>
+                Departure time: {{legendItem.departureTime}} </br>
+                Arrival time: {{legendItem.arrivalTime}} </br>
+                {{legendItem.flightTimeString}} </br>
+                <div ng-style="{{legendItem.layoverPresent ? {'visibility':'visible'} : {'display':'none'} }}">
+                    {{legendItem.layoverText}}
+                </div>
+            </p>
+        </div>
+    </div>
+</div>

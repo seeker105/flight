@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please login</h2>
+        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" 
+            ng-model="$ctrl.signInService.credentials.userLogin"/>
+        <input type="password" class="form-control" name="password" placeholder="Password" required="" 
+            ng-model="$ctrl.signInService.credentials.password"/> 
+        New member? <a ui-sref="register">Sign up!</a> 
+        <a ui-sref="authentication">                
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </a>
+    </form>
+</div>

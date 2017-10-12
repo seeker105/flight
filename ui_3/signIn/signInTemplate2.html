@@ -1,0 +1,46 @@
+<div class="signin-container">
+        <form class="form-signin">
+            <div class="sign-in-header">
+                <div class="logo">
+                    <a class="navbar-brand" href="#">
+                    </a>
+                </div>
+            </div>
+            <h2 class="form-signin-heading">Please sign in</h2>
+    
+            <div class="form-group">
+                <label for="username" class="sr-only">Username</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <label for="inputEmail" class="sr-only">Username</label>
+                        <span class="input-group-addon"><i class="fa fa-users fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" id="input-username" class="form-control" placeholder="Username" required autofocus maxlength="15" ng-model="$ctrl.signInService.credentials.userLogin">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="password" class="sr-only">Password</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <span class="input-group-addon"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
+                        <input type="password" id="input-password" class="form-control" placeholder="Password" required maxlength="15" ng-model="$ctrl.signInService.credentials.password">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a ui-sref="authentication">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                </a>
+            </div>
+            <div>
+                <a ui-sref="register">
+                <button class="btn btn-lg btn-secondary btn-block" type="submit">Register</button>
+                </a>
+            </div>
+        </form>
+    
+    </div>
+    
+    

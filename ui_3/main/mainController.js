@@ -14,7 +14,7 @@ angular.module('flight').controller('mainController', ['mainService', 'NgMap', '
             })
     }
 
-    this.mainService.interval = $interval(refreshFlights, 100000)
+    this.mainService.interval = $interval(refreshFlights, 5000)
 
     console.log(this.flights)
 

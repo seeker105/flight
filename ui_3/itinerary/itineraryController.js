@@ -31,7 +31,7 @@ angular.module('flight').controller('itineraryController', ['itineraryService', 
             })
     }
 
-    this.itineraryService.interval = $interval(refreshItineraries, 500000)
+    this.itineraryService.interval = $interval(refreshItineraries, 5000)
 
 
 

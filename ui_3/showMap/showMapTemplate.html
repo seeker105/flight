@@ -13,6 +13,7 @@
     <div class="bookings">
         <div ng-repeat="legendItem in $ctrl.legendArray">
             <p ng-style="{color: legendItem.color}">
+                {{legendItem.segmentNumbers}} </br>
                 {{legendItem.fromToString}} </br>
                 Departure time: {{legendItem.departureTime}} </br>
                 Arrival time: {{legendItem.arrivalTime}} </br>

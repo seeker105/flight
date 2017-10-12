@@ -187,33 +187,41 @@ angular.module('flight').controller('showMapController', ['showMapService', 'NgM
         this.showMapService.markers.push(new google.maps.Marker({
             position: getPosition(this.itinerary[0].origin),
             label: '1',
+            title: 'Origin City',
             map: map
         }))
 
+        this.legendArray[0].segmentNumbers = '1 -> 2'
         if (this.itinerary.length < 2) {
             this.showMapService.markers.push(new google.maps.Marker({
                 position: getPosition(this.itinerary[0].destination),
                 label: '2',
+                title: 'Destination City',
                 map: map
             }))
         } else {
             let x = 1
+            let layoverTimeString
             while (x < this.itinerary.length) {
                 console.log("while iter")
+                this.legendArray[x-1].layoverPresent = true
+                layoverTimeString = (this.itinerary[x].offset - (this.itinerary[x-1].offset + this.itinerary[x-1].flightTime)).toString()
+                this.legendArray[x-1].layoverText = this.itinerary[x].origin + ' Layover Time: ' + layoverTimeString
+                this.legendArray[x].segmentNumbers = (x+1).toString() + ' -> ' + (x+2).toString()
                 this.showMapService.markers.push(new google.maps.Marker({
                     position: getPosition(this.itinerary[x].origin),
                     label: (x+1).toString(),
+                    title: 'Layover Time in ' + this.itinerary[x].origin + ' = ' + layoverTimeString,
                     map: map
                 }))
-                this.legendArray[x-1].layoverPresent = true
                 console.log(this.itinerary[x-1])
                 console.log(this.itinerary[x])
-                this.legendArray[x-1].layoverText = this.itinerary[x].origin + ' Layover Time: ' + (this.itinerary[x].offset - (this.itinerary[x-1].offset + this.itinerary[x-1].flightTime)).toString()
                 x++
             }
             this.showMapService.markers.push(new google.maps.Marker({
                 position: getPosition(this.itinerary[x-1].destination),
                 label: (x+1).toString(),
+                title: 'Destination City',
                 map: map
             }))
         }
